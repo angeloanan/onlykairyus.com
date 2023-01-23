@@ -1,0 +1,15 @@
+---
+const { content } = Astro.props
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <title>OnlyKairyus.com - {content.title}</title>
+  </head>
+  <body class='min-h-screen min-w-full bg-neutral-100'>
+    <slot />
+  </body>
+</html>

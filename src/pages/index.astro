@@ -1,0 +1,66 @@
+---
+import MainAppLayout from '../layouts/main.astro'
+---
+
+<MainAppLayout content={{ title: 'Kanto Kairyu' }}>
+  <div class='grid grid-cols-6'>
+    <nav class='hidden bg-neutral-500 sm:block lg:col-span-1'>Navigation goes here</nav>
+    <div class='col-span-6 max-w-screen-lg bg-neutral-200 sm:col-span-5 lg:col-span-3'>
+      <header class='relative border-b border-neutral-300'>
+        {/* Image header */}
+        <div>
+          <div
+            class='absolute top-0 h-24 w-full bg-gradient-to-b from-neutral-900 px-8 py-4 text-white'
+          >
+            <div class='font-medium'>KantoKairyu</div>
+            <div class='tabular-nums tracking-tight'>
+              <span class='font-medium'>2</span> Posts &sdot; <span class='font-medium'>59.0K</span>
+              Likes
+            </div>
+          </div>
+          <img src='channels4_banner.jpg' class='h-44 w-full object-cover' alt='' />
+        </div>
+
+        {/* Start PFP & Bio */}
+        <div class='bg-neutral-100 px-8'>
+          <img
+            src='pfp.webp'
+            class='relative -top-12 h-24 w-24 rounded-full outline outline-2 outline-white'
+            alt=''
+          />
+          <div>
+            <h1 class='text-lg font-medium'>KantoKairyu</h1>
+            <div class='text-sm text-neutral-500'>@KantoKairyu</div>
+          </div>
+          <p class='py-4'>
+            My dog is my lawyer. They've recommended me to post some extra exclusive content. So
+            here it is.
+          </p>
+        </div>
+      </header>
+
+      {/* Subscribe button */}
+
+      <div class='mt-2 border-b border-neutral-300 bg-neutral-100 px-8 py-4'>
+        <div class='text-lg font-medium uppercase text-neutral-500'>Subscription</div>
+        <button
+          class='mt-4 flex w-full justify-between rounded-full bg-sky-500 px-8 py-4 font-medium text-white'
+        >
+          <span class='uppercase'>Subscribe</span>
+          <span class='uppercase'>For free</span></button
+        >
+      </div>
+      {/* Start content */}
+      <main class='mt-2 flex bg-neutral-100 px-4 py-4'>
+        <a class='w-full border-b-2 border-b-black py-2 text-center font-medium uppercase' href='/'
+          >2 Posts</a
+        >
+        <a
+          class='w-full border-b-2 border-b-neutral-200 py-2 text-center font-medium uppercase text-neutral-500'
+          href='/media'>6 Media</a
+        >
+      </main>
+    </div>
+    <aside class='hidden bg-yellow-500 lg:col-span-2 lg:block'>aside</aside>
+  </div>
+</MainAppLayout>
